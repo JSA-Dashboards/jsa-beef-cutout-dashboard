@@ -658,6 +658,24 @@ with st.expander("🔧  Raw API Debug"):
         st.dataframe(hist.tail(10))
 
 
+# ── Legal Disclaimer Footer ───────────────────────────────────────────────────
+
+_disclaimer_year = datetime.now().year
+st.markdown("<hr style='border-color:#3a3a3a;margin-top:32px;margin-bottom:16px'>", unsafe_allow_html=True)
+st.markdown(
+    f'<div style="color:#888;font-size:0.68rem;line-height:1.6;text-align:center;padding:0 24px 24px;">'
+    f'Trading commodity futures, options on futures, cash commodities, and over-the-counter derivative products involves substantial risk of loss and may not be suitable for all investors. '
+    f'This communication is provided for informational purposes only and does not constitute investment advice, a recommendation, or an offer or solicitation to buy or sell any futures, options, cash commodities, or derivative products. '
+    f'John Stewart &amp; Associates, Inc. does not accept orders to buy or sell any financial instruments via email. '
+    f'The information contained herein has been obtained from sources believed to be reliable; however, its accuracy and completeness are not guaranteed. '
+    f'Any opinions expressed are solely those of the author, are subject to change without notice, and should not be relied upon as a basis for investment decisions. '
+    f'Past performance is not indicative of future results. '
+    f'This message may contain confidential or proprietary information intended solely for the use of the designated recipient. '
+    f'&copy; John Stewart &amp; Associates, Inc. {_disclaimer_year}'
+    f'</div>',
+    unsafe_allow_html=True,
+)
+
 # ── Auto-refresh ─────────────────────────────────────────────────────────────
 
 if auto_refresh:
